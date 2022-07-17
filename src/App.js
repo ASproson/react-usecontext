@@ -1,10 +1,15 @@
-import './App.css';
+import "./App.css";
+import ConsumeContext from "./components/ConsumeContext";
+import { UserProvider } from "./context/UserContext";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <UserProvider>
+      <div className="App" style={{ marginTop: "2rem" }}>
+        <h1>useContext Demo</h1>
+        <ConsumeContext />
+      </div>
+    </UserProvider>
   );
 }
 
